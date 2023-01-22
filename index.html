@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <span id="logo">LOGO</span>
+        <span><img class="nav-icon" src="harmburger.png" alt=""></span>
+        <ul class="navlist">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a>
+                <ul>
+                    <li><a href="">service 1</a></li>
+                    <li><a href="">service 2</a>
+                        <ul>
+                            <li><a href="">sub 1</a></li>
+                            <li><a href="">sub 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="">Products</a>
+                <ul>
+                    <li><a href="">product 1</a></li>
+                    <li><a href="">product 2</a></li>
+                    <li><a href="">product 3</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    <script>
+        $(".nav-icon").click(function(){
+            $(".navlist").toggleClass("nav-show")
+        })
+    </script>
+</body>
+</html>

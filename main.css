@@ -1,0 +1,95 @@
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: darkcyan;
+    z-index: 10;
+}
+#logo{
+    color: black;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: 0.5rem auto 0.5rem 1rem;
+}
+.nav-icon{
+    width: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: none;
+}
+.navlist{
+    float: right;
+    list-style: none;
+    margin-top: 1rem;
+}
+.navlist li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.navlist li:hover >ul{
+    display: block;
+    transition: 2s ease-out;
+}
+.navlist li{
+    display: inline-block;
+    margin-right: 1rem;
+    position: relative;
+}
+.navlist ul{
+    position: absolute;
+    background-color: darkcyan;
+    padding:2rem 0.5rem 0.5rem;
+    top: 1rem;
+    width: 5.5rem;
+    display: none;
+    z-index: -10;
+}
+.navlist ul li{
+    display: block;
+    margin: 0;
+    position: relative;
+}
+.navlist ul ul{
+    position: absolute;
+    left: 5rem;
+    top: -0.5rem;
+    width: 4rem;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+}
+
+@media screen and (max-width:768px){
+    nav{
+        height: auto;
+    }
+    .nav-icon{
+        display: block;
+    }
+    .navlist{
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .navlist li{
+        display: block;
+        margin: 0.5rem auto;
+    }
+    .nav-show{
+        display: block;
+    }
+    .navlist ul{
+        position: static;
+        width: 100%;
+        background-color: rgb(1, 105, 105);
+    }
+    .navlist ul ul{
+        position: static;
+        width: 100%;
+        padding-left: 0;
+    }
+}
